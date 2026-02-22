@@ -1,0 +1,260 @@
+/* ===== SOS History Page ===== */
+
+.sos-history-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 28px 24px 60px;
+}
+
+.sos-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    gap: 16px;
+    color: var(--gray-400);
+}
+
+.sos-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(239, 68, 68, 0.15);
+    border-top: 3px solid #ef4444;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.sos-history-header h1 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.sos-history-header p {
+    font-size: 0.9rem;
+    color: var(--gray-400);
+    margin-bottom: 24px;
+}
+
+/* Active Banner */
+.sos-active-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background: rgba(239, 68, 68, 0.06);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+    animation: sosGlow 3s ease-in-out infinite;
+}
+
+@keyframes sosGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 rgba(239, 68, 68, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(239, 68, 68, 0.15);
+    }
+}
+
+.sos-active-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sos-active-icon {
+    position: relative;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sos-pulse-ring {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(239, 68, 68, 0.3);
+    animation: ripple 1.5s infinite;
+}
+
+.sos-active-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-400);
+}
+
+.sos-active-content p {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+}
+
+.sos-active-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.sos-resolve-btn {
+    padding: 8px 18px;
+    background: rgba(34, 197, 94, 0.15);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: var(--radius-sm);
+    color: var(--success-400);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 0.85rem;
+}
+
+.sos-resolve-btn:hover {
+    background: rgba(34, 197, 94, 0.25);
+    transform: translateY(-1px);
+}
+
+.sos-cancel-btn {
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--gray-400);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 0.85rem;
+}
+
+.sos-cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--gray-300);
+}
+
+/* History List */
+.sos-history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sos-history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.sos-history-item:hover {
+    transform: translateX(4px);
+    border-color: rgba(99, 102, 241, 0.15);
+}
+
+.sos-history-item-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sos-history-status-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.sos-history-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sos-history-date {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.sos-history-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: var(--radius-full);
+    border: 1px solid;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
+}
+
+.sos-history-resolved {
+    font-size: 0.78rem;
+    color: var(--gray-500);
+}
+
+.sos-history-location {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    font-family: var(--font-display);
+}
+
+/* Empty */
+.sos-empty {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.sos-empty-icon {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+}
+
+.sos-empty h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.sos-empty p {
+    color: var(--gray-400);
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .sos-history-page {
+        padding: 20px 16px 40px;
+    }
+
+    .sos-active-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sos-active-content {
+        flex-direction: column;
+    }
+
+    .sos-history-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .sos-history-location {
+        align-self: flex-end;
+    }
+}
