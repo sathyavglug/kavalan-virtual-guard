@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">KAVALAN</string>
+    <string name="title_activity_main">KAVALAN</string>
+    <string name="package_name">com.kavalan.app</string>
+    <string name="custom_url_scheme">com.kavalan.app</string>
+</resources>
